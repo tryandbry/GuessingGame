@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+body {
+  background-image: url('nyancat1.jpg');
+  background-position: center;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -13,6 +18,12 @@ img {
   height: auto;
   padding: 10px;
   object-position: center;
+}
+
+#headers {
+  background-color: rgba(0,51,102,.8);
+  color: #fff;
+  margin-top: 20px;
 }
 
 #input-parent {
@@ -64,11 +75,13 @@ img {
 
 .guess {
   display: inline;
-  border: 2px solid #000;
+  border: 2px solid rgb(121,188,255);
   border-radius: 10px;
   font-size: 80px;
   margin: 1px;
   padding: 5px 40px 5px 40px;
+  background-color: rgba(0,51,102,.8);
+  color: #fff;
 }
 
 #footer {
