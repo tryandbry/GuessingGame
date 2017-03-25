@@ -17,13 +17,13 @@
         </div>
 
         <div id='main'>
-          <div id='input-parent'>
+          <div id='input-parent' class="col-sm-12">
             <!-- Player's guess input, and submit button -->
-            <input placeholder="#" maxlength='3' autofocus=autofocus></input>
-            <button>Go!</button>
+            <input id="input-field" class="btn btn-default" placeholder="#" maxlength='3' autofocus=autofocus></input>
+            <button id="input-go" class="btn btn-default">Go!</button>
           </div>
 
-          <div id='guesses'>
+          <div id='guesses' class="col-sm-12">
             <!-- unordered list of guesses -->
             <ul>
               <li class="guess">-</li>
@@ -34,7 +34,7 @@
             </ul>
           </div>
 
-          <div id="menu-btns">
+          <div id="menu-btns" class="col-sm-12">
             <!-- reset and hint buttons -->
             <button id="btn-reset" class="btn btn-default">Reset</button>
             <button id="btn-hint" class="btn btn-default">Hint</button>

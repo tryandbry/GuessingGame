@@ -15,6 +15,29 @@ img {
   object-position: center;
 }
 
+#input-parent {
+  position: relative;
+}
+#input-field {
+  border-radius: 90px;
+  font-size: 50px;
+  padding: 40px 0px 40px 0px;
+  width: 150px;
+  margin: 30px;
+}
+
+#input-go {
+  border-radius: 90px;
+  color: #fff;
+  background-color: rgb(87,193,112);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 22px 20px 22px 20px;
+  position: absolute;
+  top: 63%;
+  left: 53%;
+}
+
 #btn-reset {
   color: #fff;
   font-size: 20px;
