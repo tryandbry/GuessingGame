@@ -3,20 +3,55 @@
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 img {
-    display: inline;
-    width: 200px;
-    height: 100px;
+  display: inline;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  object-position: center;
+}
+
+#btn-reset {
+  color: #fff;
+  font-size: 20px;
+  background-color: rgb(245,172,87);
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+}
+
+#btn-hint {
+  color: #fff;
+  font-size: 20px;
+  background-color: rgb(75,191,220);
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+}
+
+.guesses {
+  display: inline;
+  border: 7px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 7px;
+}
+
+.guess {
+  display: inline;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 80px;
+  margin: 1px;
+  padding: 5px 40px 5px 40px;
 }
 
 #footer {
-    width: 100%;
-    border-top: solid 2px black;
-    background-color: white;
-    position: fixed;
-    bottom: 0;
+  width: 100%;
+  border-top: solid 2px black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
 }
