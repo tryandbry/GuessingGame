@@ -49,9 +49,15 @@ Game.prototype.playersGuessSubmission = function(n){
 }
 
 Game.prototype.checkGuess = function(n){
-  if(this.playersGuess == this.winningNumber) return 'You Win!';
+  if(this.playersGuess == this.winningNumber) {
+    this.pastGuesses.push(n);
+    return 'You Win!';
+  }
   else if(this.pastGuesses.indexOf(n) != -1) return "You have already guessed that number.";
-  else if(this.pastGuesses.length == 4) return 'You Lose.';
+  else if(this.pastGuesses.length == 4) {
+    this.pastGuesses.push(n);
+    return 'You Lose.';
+  }
   else {
     this.pastGuesses.push(n);
     if(Math.abs(this.playersGuess - this.winningNumber) < 10) return "You\'re burning up!";
@@ -81,9 +87,22 @@ $(document).ready(function(){
   var game = new Game();
 
   var submission = function(){
+    var guesscount = game.pastGuesses.length;
     var input = +$('#input-field').val();
     $('#input-field').val('');
-    console.log(game.playersGuessSubmission(input));
+    $('#headers').find('h1').text(game.playersGuessSubmission(input));
+    if(game.pastGuesses.length != guesscount){
+      $('.guess').filter(function(){
+        return $(this).text() == '-'
+      }).first().text(input);
+      // disable buttons if win/lose
+      if(game.pastGuesses.length == 5 ||
+         game.playersGuess == game.winningNumber){
+        $('#input-go').attr('disabled','true');
+        $('#btn-hint').attr('disabled','true');
+        $('#headers').find('h2').text("Hit the reset button to play again");
+      }
+    }
   }
 
   $('#input-go').on('click',submission);
