@@ -109,6 +109,23 @@ $(document).ready(function(){
   $('#input-field').on('keypress',function(event){
     if(event.which == 13) submission();
   });
+
+  $('#btn-reset').on('click',function(){
+    game = new Game();
+    $('.guess').text('-');
+    $('#input-go').removeAttr('disabled');
+    $('#btn-hint').removeAttr('disabled');
+    $('#headers').find('h1').text("Play the guessing Game!");
+    $('#headers').find('h2').text("Guess a number between 1-100");
+  });
+
+  $('#btn-hint').on('click',function(){
+    var hint = game.provideHint();
+    $('#headers').find('h1').text("It's one of these: [ " +
+                                  hint[0] + ", " + 
+                                  hint[1] + ", " + 
+                                  hint[2] + " ]" );
+  });
 });
 
 
